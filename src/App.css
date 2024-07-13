@@ -1,38 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 .App {
+  background-color: black;
+  font-family: "Dela Gothic One", sans-serif;
+}
+header h1{
+  font-size: 3rem;
+  color: gold;
   text-align: center;
+  letter-spacing: .2rem;
+  line-height: 3.5rem;
+  padding: 1.5rem 0;
+  font-weight: 600;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.container{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.container h2{
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.movie-list{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  width: 90%;
+  margin: 0 auto;
+}
+.movie{
+  background-color: #1f1c1c;
+  background-position: center;
+  background-blend-mode: overlay;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 15px;
+}
+.movie:hover{
+  box-shadow: 0px 0px 10px 3px rgb(126, 87, 157);
+  transform: scale(1.02);
+  border: 1px solid rgb(126, 87, 157);
+}
+.movie .movie-details h3{
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: .2rem;
+  padding-bottom: .3rem;
+}
+.movie .movie-details p{
+  color: rgb(157, 157, 157);
+  font-weight: 500;
+  letter-spacing: .1rem;
+}
+.movie>p{
+  font-size: 1rem;
+  font-weight: 300;
+  padding-bottom: .5rem;
+}
+.movie button{
+  border: none;
+  background-color: transparent;
+  text-align: left;
+  outline: none;
+}
+.movie button a{
+  color: gold;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+footer p{
+  color: #000;
+  text-align: center;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+  padding: 1rem 0;
+  background-color: gold;
+  margin-top: 1rem;
+  font-size: .8rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (min-width: 489px) and (max-width: 727px){
+  header h1{
+    padding: 1.5rem 0 1rem;
   }
-  to {
-    transform: rotate(360deg);
+  .container h2{
+    font-size: 1.8rem;
+  }
+  .movie-list{
+    width: 75%;
+  }
+  .movie>p{
+    font-size: 1.1rem;
+  }
+  footer p{
+    font-size: 1.15rem;
   }
 }
+
+/**** Tablet View */
+@media screen and (min-width: 728px) and (max-width: 979px){
+  header h1{
+    font-size: 4rem;
+    padding: 2rem 0 1.5;
+  }
+  .movie-list{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    width: 80%;
+  }
+  .movie .movie-details h3{
+    font-size: 1.6rem;
+  }
+  .movie>p{
+    font-size: 1.1rem;
+  }
+  footer p{
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+}
+
+/**** Desktop View */
+@media screen and (min-width: 980px){
+  header h1{
+    font-size: 5rem;
+    letter-spacing: .3rem;
+    line-height: 4.5rem;
+    padding: 2.5rem 0 1rem;
+  }
+  .container h2{
+    font-size: 2.5rem;
+  }
+  .movie-list{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 90%;
+  }
+  .movie{
+    gap: 1.2rem;
+    padding: 1rem;
+    gap: .5rem;
+  }
+  .movie .movie-details p{
+    font-size: 1.1rem;
+  }
+  .movie>p{
+    font-size: 1.1rem;
+  }
+  .movie button a{
+    font-size: 1.35rem;
+  }
+  footer p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 1.3rem 0;
+    margin-top: 1.3rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
