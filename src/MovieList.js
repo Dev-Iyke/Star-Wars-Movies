@@ -1,10 +1,16 @@
+import { signOut } from "firebase/auth";
 import { useEffect, useState } from "react";
-import {Link} from 'react-router-dom'
+import { useDispatch, useSelector } from "react-redux";
+import {Link, useNavigate} from 'react-router-dom'
+import { auth } from "./auth/config";
+import { logout } from "./redux-toolkit/slices/AuthenticationSlice";
 const statusTag = document.getElementById('curStatus')
 
 const MovieList = () => {
     const [movies, setMovies] = useState([])
-    
+    const {userEmail} = useSelector((store) => store.auth)
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
     useEffect(() => {
         fetch('https://swapi.dev/api/films')
         .then(response => response.json())
@@ -12,12 +18,24 @@ const MovieList = () => {
         .catch(err => statusTag.textContent = err.message)
     })
 
-    
+    const handleLogout = () => {
+        signOut(auth)
+        .then(() => {
+            dispatch(logout())
+            navigate('/')
+        })
+    }
     
     return ( 
+        <div className="movies-container">
         <div className="container">
-            <h2>Movies List</h2>
-            
+            <div>
+                <h2>Movies List</h2>
+                <div>
+                    {userEmail}
+                    <button onClick={handleLogout}>Log out</button>
+                </div>
+            </div>
             <p id="curStatus"></p>
             <div className="movie-list">{movies.map((movie, index) => {
                 console.log(index)
@@ -34,6 +52,7 @@ const MovieList = () => {
                     <button><Link to='/more'>More info</Link></button>
                 </div>
             })}</div>
+        </div>
         </div>
      );
 }
