@@ -2,7 +2,7 @@ import SignIn from "../../auth/components/SignIn";
 
 const Homepage = () => {
     return ( 
-        <div>
+        <div className="landing">
             <SignIn />
         </div>
      );

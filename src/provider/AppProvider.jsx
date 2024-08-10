@@ -7,7 +7,13 @@ const AppProvider = ({children}) => {
     const persistRedux = persistStore(store)
     return ( 
         <Provider store={store}>
-            <PersistGate loading={<h2>Loading...</h2>} persistor={persistRedux}>
+            <PersistGate loading={
+                <div id="loader">
+                    <img src='imgs/starwars-icon.png' alt="loading" id="loading"/>
+                    <h2>Loading...</h2>
+                </div>
+                
+                } persistor={persistRedux}>
                 {
                     children
                 }

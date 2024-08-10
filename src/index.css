@@ -1,37 +1,32 @@
+@import url('./styles/App.css');
+@import url('./styles/login.css');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+#loader{
+  width: 100px;
+  margin: 20% auto;
+  text-align: center;
+  font-family: "Dela Gothic One", sans-serif;
+}
+#loading{
+  height: 60px;
+  width: 60px;
+  margin-bottom: 10px;
+  animation: round 1s .2s infinite;
+}
+@keyframes round {
+  0%{
 
-.sign-in, .sign-up{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f8f9fa;
-  gap: 1rem;
+    transform: rotate(0deg);
+    background-color: brown;
+  }
+  100%{
+    transform: rotate(360deg);
+    background-color: rgb(72, 172, 52);
+  }
 }
-.sign-in form, .sign-up form{
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.sign-in form input, .sign-up form input{
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  outline: none;
-}
-.sign-in form button, .sign-up form button{
-  padding: 0.5rem 1rem;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-a{
-  text-decoration: none;
-}
+

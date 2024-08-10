@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-.movies-container {
+.myApp{
   background-color: black;
   font-family: "Dela Gothic One", sans-serif;
-  height: 100%;
+  color: white;
 }
 header h1{
   font-size: 3rem;
@@ -14,22 +14,42 @@ header h1{
   line-height: 3.5rem;
   padding: 1.5rem 0;
   font-weight: 600;
+  background-color: black;
+
 }
-.container{
-  color: white;
+.profile{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
 }
 .container h2{
   text-align: center;
   padding: 1rem 0;
-  font-size: 1.5rem;
-  font-weight: 500;
+  font-size: 1.7rem;
+  font-weight: 600;
 }
+.user p{
+  font-size: .85rem;
+}
+.user button{
+  background-color: gold;
+  border: 2px solid white;
+  color: black;
+  border-radius: 8px;
+  padding: 4px 8px;
+  margin-top: 6px;
+  font-size: .8rem;
+  cursor: pointer;
+}
+
 .movie-list{
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 1.5rem;
   width: 90%;
   margin: 0 auto;
+  padding: 2rem 0;
 }
 .movie{
   background-color: #1f1c1c;
@@ -82,19 +102,25 @@ footer p{
   font-family: 'Roboto', sans-serif;
   padding: 1rem 0;
   background-color: gold;
-  margin-top: 1rem;
   font-size: .8rem;
 }
+
 
 @media screen and (min-width: 489px) and (max-width: 727px){
   header h1{
     padding: 1.5rem 0 1rem;
   }
+  .user p{
+    font-size: 1rem;
+  }
+  .user button{
+    font-size: 1rem;
+  }
   .container h2{
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
   .movie-list{
-    width: 75%;
+    width: 85%;
   }
   .movie>p{
     font-size: 1.1rem;
@@ -110,13 +136,21 @@ footer p{
     font-size: 4rem;
     padding: 2rem 0 1.5;
   }
+  .user p{
+    font-size: 1.1rem;
+  }
+  .user button{
+    padding: 5px 10px;
+    margin-top: 7px;
+    font-size: 1rem;
+  }
   .movie-list{
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-    width: 80%;
+    width: 85%;
   }
   .movie .movie-details h3{
-    font-size: 1.6rem;
+    font-size: 1.3rem;
   }
   .movie>p{
     font-size: 1.1rem;
@@ -133,7 +167,15 @@ footer p{
     font-size: 5rem;
     letter-spacing: .3rem;
     line-height: 4.5rem;
-    padding: 2.5rem 0 1rem;
+    padding: 1rem 0;
+  }
+  .user p{
+    font-size: 1.2rem;
+  }
+  .user button{
+    padding: 5px 10px;
+    margin-top: 8px;
+    font-size: 1rem;
   }
   .container h2{
     font-size: 2.5rem;
@@ -151,6 +193,9 @@ footer p{
   .movie .movie-details p{
     font-size: 1.1rem;
   }
+  .movie .movie-details h3{
+    font-size: 1.4rem;
+  }
   .movie>p{
     font-size: 1.1rem;
   }
@@ -161,7 +206,6 @@ footer p{
     font-size: 1.6rem;
     font-weight: 400;
     padding: 1.3rem 0;
-    margin-top: 1.3rem;
   }
 }
 

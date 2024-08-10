@@ -29,16 +29,16 @@ const MovieList = () => {
     return ( 
         <div className="movies-container">
         <div className="container">
-            <div>
+            <div className="profile">
                 <h2>Movies List</h2>
-                <div>
-                    {userEmail}
+                <div className="user">
+                    <p>{userEmail}</p>
                     <button onClick={handleLogout}>Log out</button>
                 </div>
             </div>
             <p id="curStatus"></p>
             <div className="movie-list">{movies.map((movie, index) => {
-                console.log(index)
+                //console.log(index)
                 const movieBg = [
                     'url(imgs/hope.jpeg)', 'url(imgs/strikes.jpeg)', 'url(imgs/jedire.jpeg)', 'url(imgs/menace.jpeg)', 'url(imgs/clones.jpeg)', 'url(imgs/sith.jpeg)',
                 ]

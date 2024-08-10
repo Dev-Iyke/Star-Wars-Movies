@@ -27,7 +27,6 @@ const SignIn = () => {
 
             });
         }
-        //console.log('Email:', email, 'Password:', password)
     }
 
     return ( 
@@ -36,11 +35,11 @@ const SignIn = () => {
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="email">Email:</label><br/>
-                    <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)}/><br/>
+                    <input type="email" id="email" name="email" placeholder="enter email" value={email} onChange={(e) => setEmail(e.target.value)}/><br/>
                 </div>
                 <div>
                     <label htmlFor="pwd">Password:</label><br/>
-                    <input type="password" id="pwd" name="pwd" value={password} onChange={(e) => setPassword(e.target.value)}/><br/>
+                    <input type="password" id="pwd" name="pwd" placeholder="enter password" value={password} onChange={(e) => setPassword(e.target.value)}/><br/>
                 </div>
                 <button type="submit">Sign In</button>
             </form>
