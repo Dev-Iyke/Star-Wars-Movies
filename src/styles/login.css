@@ -31,6 +31,9 @@
     border-radius: 5px;
     cursor: pointer;
   }
+  form button:hover{
+    background-color: #103a12;
+  }
   a{
     text-decoration: none;
     font-weight: 600;
@@ -44,7 +47,7 @@
       font-size: 1.2rem;
     }
     .sign-in form input, .sign-up form input{
-      padding: 1.1rem;
+      padding: .9rem;
       width: 100%;
       border-radius: 10px;
       font-size: 1.3rem;
@@ -64,7 +67,7 @@
       font-size: 1.5rem;
     }
     .sign-in form input, .sign-up form input{
-      padding: 1.1rem;
+      padding: .8rem;
       width: 100%;
       border-radius: 10px;
       font-size: 1.5rem;
