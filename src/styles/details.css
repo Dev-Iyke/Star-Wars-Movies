@@ -1,0 +1,55 @@
+/*  .movie-list{
+    background-color: red;
+} */
+.movie-list{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+  .movie{
+    background-color: #1f1c1c;
+    background-position: center;
+    background-blend-mode: overlay;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 15px;
+  }
+  .movie:hover{
+    box-shadow: 0px 0px 10px 3px rgb(126, 87, 157);
+    transform: scale(1.02);
+    border: 1px solid rgb(126, 87, 157);
+  }
+  .movie .movie-details h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    padding-bottom: .3rem;
+  }
+  .movie .movie-details p{
+    color: rgb(157, 157, 157);
+    font-weight: 500;
+    letter-spacing: .1rem;
+  }
+  .movie>p{
+    font-size: 1rem;
+    font-weight: 300;
+    padding-bottom: .5rem;
+  }
+  .movie button{
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    outline: none;
+  }
+  .movie button a{
+    color: gold;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }

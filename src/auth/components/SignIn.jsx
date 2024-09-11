@@ -10,6 +10,8 @@ const SignIn = () => {
     const [password, setPassword] = useState('')
     const dispatch = useDispatch()
     const navigate = useNavigate()
+    
+    // Handle form submission event and authentication using Firebase Auth
     const handleSubmit = (e) => {
         e.preventDefault()
         if (email.length > 7 && password.length > 5){
